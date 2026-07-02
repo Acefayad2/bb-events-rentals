@@ -239,7 +239,7 @@ img { max-width: 100%; display: block; }
 
 .service-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 24px;
   margin-top: 46px;
 }
@@ -286,6 +286,43 @@ img { max-width: 100%; display: block; }
 .gallery-tile.g4 { background: linear-gradient(135deg, #ecd6cd, #d8b3a8); }
 .gallery-tile.g5 { background: linear-gradient(135deg, #f3e2df, #e0bcc0); }
 .gallery-tile.g6 { background: linear-gradient(135deg, #e6c9d2, #cf9fae); }
+
+.reviews { background: var(--color-surface); }
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+  margin-top: 46px;
+}
+.review-card {
+  background: var(--color-background);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 28px 26px;
+  box-shadow: var(--shadow-card);
+}
+.stars {
+  display: flex;
+  gap: 3px;
+  color: var(--color-gold);
+  margin-bottom: 14px;
+}
+.stars svg { width: 16px; height: 16px; }
+.review-quote {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 17px;
+  line-height: 1.6;
+  color: var(--color-foreground);
+  margin: 0 0 16px;
+}
+.review-author {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-primary);
+  margin: 0;
+}
+.review-author span { font-weight: 400; color: var(--color-muted-fg); }
 
 .area { background: var(--color-surface); }
 .area-badges { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin: 30px 0 20px; }
