@@ -24,8 +24,13 @@ const SHEET_ENDPOINT = 'https://script.google.com/macros/s/AKfycbzgDevZVZxGlB_Dz
 form.addEventListener('submit', async (e) => {
   e.preventDefault();
   const name = form.name.value.trim();
+  const phone = form.phone.value.trim();
   const email = form.email.value.trim();
+  const eventType = form.eventType.value;
   const eventDate = form.eventDate.value;
+  const guestCount = form.guestCount.value.trim();
+  const location = form.location.value.trim();
+  const services = [...form.querySelectorAll('input[name="services"]:checked')].map(el => el.value).join(', ');
   const message = form.message.value.trim();
 
   submitBtn.disabled = true;
@@ -36,7 +41,7 @@ form.addEventListener('submit', async (e) => {
       method: 'POST',
       mode: 'no-cors',
       headers: { 'Content-Type': 'text/plain' },
-      body: JSON.stringify({ name, email, eventDate, message })
+      body: JSON.stringify({ name, phone, email, eventType, eventDate, guestCount, location, services, message })
     });
     formNote.textContent = "Thanks! We've received your message and will be in touch soon.";
     form.reset();
