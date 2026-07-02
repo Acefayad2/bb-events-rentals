@@ -17,24 +17,32 @@ mobileNav.querySelectorAll('a').forEach(link => {
 
 const form = document.getElementById('contactForm');
 const formNote = document.getElementById('formNote');
+const submitBtn = form.querySelector('button[type="submit"]');
 
-form.addEventListener('submit', (e) => {
+const SHEET_ENDPOINT = 'https://script.google.com/macros/s/AKfycbzgDevZVZxGlB_Dz76iQyMXi9CxsO1uS93_YzBmttoxlC1CV7kLPsXYFQ1EYck58081xA/exec';
+
+form.addEventListener('submit', async (e) => {
   e.preventDefault();
   const name = form.name.value.trim();
   const email = form.email.value.trim();
   const eventDate = form.eventDate.value;
   const message = form.message.value.trim();
 
-  const subject = encodeURIComponent(`Event Inquiry from ${name}`);
-  const bodyLines = [
-    `Name: ${name}`,
-    `Email: ${email}`,
-    eventDate ? `Event Date: ${eventDate}` : null,
-    '',
-    message
-  ].filter(Boolean);
-  const body = encodeURIComponent(bodyLines.join('\n'));
+  submitBtn.disabled = true;
+  formNote.textContent = 'Sending…';
 
-  window.location.href = `mailto:bb.rental.and.events@gmail.com?subject=${subject}&body=${body}`;
-  formNote.textContent = 'Opening your email app to send this message…';
+  try {
+    await fetch(SHEET_ENDPOINT, {
+      method: 'POST',
+      mode: 'no-cors',
+      headers: { 'Content-Type': 'text/plain' },
+      body: JSON.stringify({ name, email, eventDate, message })
+    });
+    formNote.textContent = "Thanks! We've received your message and will be in touch soon.";
+    form.reset();
+  } catch (err) {
+    formNote.textContent = "Something went wrong sending that — please call or email us directly.";
+  } finally {
+    submitBtn.disabled = false;
+  }
 });
