@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>B &amp; B Events and Rentals — Flyer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  @page { size: 8.5in 11in; margin: 0; }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0; padding: 0;
+    width: 8.5in; height: 11in;
+    font-family: 'Jost', sans-serif;
+    color: #2b1720;
+    background: #fdf6f3;
+  }
+  .page {
+    position: relative;
+    width: 8.5in;
+    height: 11in;
+    overflow: hidden;
+    background:
+      radial-gradient(ellipse at top, #fdeef0 0%, #fdf6f3 55%);
+    border: 10px solid #ffffff;
+    outline: 1.5px solid #d9a9b8;
+    outline-offset: -18px;
+  }
+
+  .corner { position: absolute; width: 2.6in; height: 2.6in; opacity: 0.85; }
+  .corner-tl { top: -0.35in; left: -0.35in; }
+  .corner-br { bottom: -0.35in; right: -0.35in; transform: rotate(180deg); }
+
+  .content {
+    position: relative;
+    z-index: 1;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+    padding: 0.7in 0.75in 0.5in;
+  }
+
+  .eyebrow {
+    font-size: 13px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: #a8375c;
+    font-weight: 600;
+    margin: 0.15in 0 0.25in;
+  }
+
+  .script-logo { font-family: 'Great Vibes', cursive; font-size: 92px; color: #1a1a1a; line-height: 1; margin: 0; }
+  .sub-logo { font-family: 'Cormorant', serif; letter-spacing: 6px; font-size: 18px; margin: 0.12in 0 0.35in; color: #3a1420; }
+
+  .tagline {
+    font-family: 'Cormorant', serif;
+    font-style: italic;
+    font-size: 24px;
+    max-width: 5.6in;
+    color: #2b1720;
+    margin: 0 0 0.4in;
+    line-height: 1.4;
+  }
+
+  .services {
+    display: flex;
+    gap: 0.28in;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 0 0.45in;
+  }
+  .service-pill {
+    font-family: 'Cormorant', serif;
+    font-weight: 600;
+    font-size: 19px;
+    color: #6b1f3d;
+    padding: 8px 22px;
+    border: 1.5px solid #6b1f3d;
+    border-radius: 999px;
+    background: #ffffffcc;
+  }
+
+  .divider {
+    width: 1.4in;
+    height: 1px;
+    background: #d9a9b8;
+    margin: 0 0 0.4in;
+  }
+
+  .headline {
+    font-family: 'Cormorant', serif;
+    font-weight: 700;
+    font-size: 34px;
+    margin: 0 0 0.35in;
+    color: #6b1f3d;
+  }
+
+  .details {
+    font-size: 15px;
+    line-height: 1.8;
+    color: #4a3037;
+    max-width: 5.2in;
+    margin: 0 0 0.5in;
+  }
+
+  .contact-block {
+    width: 100%;
+    padding-top: 0.35in;
+    border-top: 1px solid #ecd0d7;
+  }
+  .contact-row {
+    font-family: 'Cormorant', serif;
+    font-size: 19px;
+    font-weight: 600;
+    color: #2b1720;
+    margin: 0.06in 0;
+  }
+  .contact-row .k { color: #a8375c; text-transform: uppercase; font-size: 12px; letter-spacing: 0.1em; font-weight: 600; margin-right: 8px; font-family: 'Jost', sans-serif; }
+
+  .service-area {
+    font-family: 'Jost', sans-serif;
+    font-size: 13px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #a8375c;
+    margin-top: 0.2in;
+    font-weight: 500;
+  }
+</style>
+</head>
+<body>
+  <div class="page">
+    <img class="corner corner-tl" src="assets/flyer-corner.svg" alt="">
+    <img class="corner corner-br" src="assets/flyer-corner.svg" alt="">
+
+    <div class="content">
+      <p class="eyebrow">Serving the DMV &middot; DC &middot; Maryland &middot; Virginia</p>
+      <h1 class="script-logo">B &amp; B</h1>
+      <p class="sub-logo">EVENTS &amp; RENTALS</p>
+
+      <p class="tagline">From tables and chairs to party essentials, we provide the rentals you need to bring your event to life.</p>
+
+      <div class="services">
+        <span class="service-pill">Planning</span>
+        <span class="service-pill">Decorating</span>
+        <span class="service-pill">Coordinating</span>
+        <span class="service-pill">Rentals</span>
+      </div>
+
+      <div class="divider"></div>
+
+      <h2 class="headline">Let's Plan Your Next Celebration</h2>
+      <p class="details">Weddings &middot; Birthdays &middot; Baby Showers &middot; Graduations &middot; Corporate Events<br>
+      Tables, chairs, linens &amp; party essentials — delivered, set up, and ready for your guests.</p>
+
+      <div class="contact-block">
+        <p class="contact-row"><span class="k">Business</span>223-253-2959</p>
+        <p class="contact-row"><span class="k">Home</span>301-455-6558</p>
+        <p class="contact-row"><span class="k">Email</span>bb.rental.and.events@gmail.com</p>
+        <p class="service-area">Now Booking &middot; Free Consultations</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

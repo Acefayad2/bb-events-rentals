@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant:ital,wght@0,500;0,600;0,700;1,400&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { width: 1200px; height: 630px; overflow: hidden; }
+  body {
+    font-family: 'Jost', sans-serif;
+    background: radial-gradient(ellipse at top, #fdeef0 0%, #fdf6f3 60%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  .corner { position: absolute; width: 340px; height: 340px; opacity: 0.85; }
+  .corner-tl { top: -60px; left: -60px; }
+  .corner-br { bottom: -60px; right: -60px; transform: rotate(180deg); }
+  .content { text-align: center; position: relative; z-index: 1; }
+  .eyebrow {
+    font-size: 20px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: #a8375c;
+    font-weight: 600;
+    margin-bottom: 18px;
+  }
+  .script { font-family: 'Great Vibes', cursive; font-size: 130px; color: #1a1a1a; line-height: 1; }
+  .sub { font-family: 'Cormorant', serif; letter-spacing: 10px; font-size: 26px; color: #3a1420; margin: 14px 0 26px; }
+  .tagline { font-family: 'Cormorant', serif; font-style: italic; font-size: 28px; color: #2b1720; max-width: 780px; margin: 0 auto; }
+</style>
+</head>
+<body>
+  <img class="corner corner-tl" src="assets/flyer-corner.svg" alt="">
+  <img class="corner corner-br" src="assets/flyer-corner.svg" alt="">
+  <div class="content">
+    <p class="eyebrow">Serving the DMV &middot; DC &middot; Maryland &middot; Virginia</p>
+    <div class="script">B &amp; B</div>
+    <p class="sub">EVENTS &amp; RENTALS</p>
+    <p class="tagline">From tables and chairs to party essentials —<br>we bring your event to life.</p>
+  </div>
+</body>
+</html>

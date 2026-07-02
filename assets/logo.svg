@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 200" role="img" aria-label="B and B Events and Rentals logo">
+  <defs>
+    <style>
+      .script { font-family: 'Great Vibes', cursive; fill: #1a1a1a; }
+    </style>
+  </defs>
+  <!-- laurel left -->
+  <g transform="translate(20,110)">
+    <path d="M0,60 C20,40 30,10 60,0" stroke="#6b1f3d" stroke-width="2" fill="none" opacity="0.7"/>
+    <ellipse cx="8" cy="52" rx="10" ry="5" fill="#6b1f3d" transform="rotate(-30 8 52)" opacity="0.85"/>
+    <ellipse cx="18" cy="38" rx="10" ry="5" fill="#8a2d4e" transform="rotate(-15 18 38)" opacity="0.85"/>
+    <ellipse cx="30" cy="24" rx="9" ry="5" fill="#6b1f3d" transform="rotate(0 30 24)" opacity="0.85"/>
+    <ellipse cx="46" cy="12" rx="9" ry="5" fill="#8a2d4e" transform="rotate(15 46 12)" opacity="0.85"/>
+    <circle cx="58" cy="4" r="5" fill="#a8375c"/>
+  </g>
+  <!-- laurel right -->
+  <g transform="translate(400,110) scale(-1,1)">
+    <path d="M0,60 C20,40 30,10 60,0" stroke="#6b1f3d" stroke-width="2" fill="none" opacity="0.7"/>
+    <ellipse cx="8" cy="52" rx="10" ry="5" fill="#6b1f3d" transform="rotate(-30 8 52)" opacity="0.85"/>
+    <ellipse cx="18" cy="38" rx="10" ry="5" fill="#8a2d4e" transform="rotate(-15 18 38)" opacity="0.85"/>
+    <ellipse cx="30" cy="24" rx="9" ry="5" fill="#6b1f3d" transform="rotate(0 30 24)" opacity="0.85"/>
+    <ellipse cx="46" cy="12" rx="9" ry="5" fill="#8a2d4e" transform="rotate(15 46 12)" opacity="0.85"/>
+    <circle cx="58" cy="4" r="5" fill="#a8375c"/>
+  </g>
+  <text x="210" y="95" text-anchor="middle" class="script" font-size="88">B &amp; B</text>
+  <text x="210" y="140" text-anchor="middle" font-family="'Cormorant', serif" font-size="17" letter-spacing="5" fill="#3a1420">EVENTS &amp; RENTALS</text>
+</svg>

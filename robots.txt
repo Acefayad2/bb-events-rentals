@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /og-image.html
+Disallow: /flyer.html
+
+Sitemap: https://bb-events-rentals.netlify.app/sitemap.xml
