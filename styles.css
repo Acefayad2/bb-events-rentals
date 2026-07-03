@@ -268,6 +268,22 @@ img { max-width: 100%; display: block; }
 .service-card h3 { font-size: 21px; }
 .service-card p { color: var(--color-muted-fg); font-size: 15px; margin: 0; }
 
+.chair-thumbs {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 18px;
+}
+.chair-thumbs img {
+  width: 56px;
+  height: 56px;
+  object-fit: contain;
+  background: var(--color-background);
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  padding: 6px;
+}
+
 .gallery { background: var(--color-background); }
 .gallery-note { color: var(--color-muted-fg); }
 .gallery-grid {
@@ -280,12 +296,17 @@ img { max-width: 100%; display: block; }
   aspect-ratio: 4 / 3;
   border-radius: var(--radius);
   background: linear-gradient(135deg, #f6d9e0, #eec3cf);
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
 }
-.gallery-tile.g2 { background: linear-gradient(135deg, #e9c8d3, #d9a9b8); }
-.gallery-tile.g3 { background: linear-gradient(135deg, #f0dee3, #dcb6c1); }
-.gallery-tile.g4 { background: linear-gradient(135deg, #ecd6cd, #d8b3a8); }
-.gallery-tile.g5 { background: linear-gradient(135deg, #f3e2df, #e0bcc0); }
-.gallery-tile.g6 { background: linear-gradient(135deg, #e6c9d2, #cf9fae); }
+.gallery-tile img, .gallery-tile video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 400ms var(--ease);
+}
+.gallery-tile:hover img, .gallery-tile:hover video { transform: scale(1.04); }
 
 .reviews { background: var(--color-surface); }
 .reviews-grid {
